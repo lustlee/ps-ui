@@ -24,9 +24,6 @@ dist-ssr
 *.sw?
 
 .env
-public/images/bg-1.jpg
-public/images/bg-2.jpg
-public/images/bg-3.jpg
-public/images/bg-4.jpg
-public/images/bg-5.jpg
-public/images/avatar-1.png
+public/images/
+public/covers/
+public/backgrounds/
