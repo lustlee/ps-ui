@@ -1,3 +1,31 @@
-export const TopMenu = () => {
-	return <div>TopMenu</div>;
+import type { FC } from 'react';
+import { CATEGORIES } from '../../data/categories.data';
+import cn from 'clsx';
+import type { TCategorySlug } from '../../types';
+
+interface Props {
+	activeCategory: string;
+	setActiveCategory: (slug: TCategorySlug) => void;
+}
+
+export const TopMenu: FC<Props> = ({ activeCategory, setActiveCategory }) => {
+	return (
+		<nav className='ml-28 mt-5'>
+			<ul className='flex gap-6 items-center'>
+				{CATEGORIES.map((category) => (
+					<li key={category.slug}>
+						<button
+							onClick={() => {
+								console.log(category.slug);
+								setActiveCategory(category.slug);
+							}}
+							className={cn('border-2 font-medium rounded-full py-0.5 px-5', activeCategory === category.slug ? 'border-[#1d6ab2]' : 'border-transparent')}
+						>
+							{category.title}
+						</button>
+					</li>
+				))}
+			</ul>
+		</nav>
+	);
 };
