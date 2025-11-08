@@ -1,10 +1,9 @@
-import { ArrowDown, ArrowLeft, ArrowRight } from 'lucide-react';
+import { ArrowDown, ArrowLeft, ArrowRight, ArrowUp } from 'lucide-react';
 
 export const hotkeysData = [
 	{
-		icon: <div className='text-base mt-0.5 font-medium'>1</div>,
+		icon: <ArrowUp />,
 		label: 'TOP MENU',
-		hotkey: '1',
 	},
 	{
 		icon: (
@@ -13,7 +12,6 @@ export const hotkeysData = [
 			</>
 		),
 		label: 'DETAILS',
-		hotkey: 'ArrowDown',
 	},
 	{
 		icon: (
@@ -22,7 +20,6 @@ export const hotkeysData = [
 			</>
 		),
 		label: 'PREV GAME',
-		hotkey: 'ArrowLeft',
 	},
 	{
 		icon: (
@@ -31,7 +28,6 @@ export const hotkeysData = [
 			</>
 		),
 		label: 'NEXT GAME',
-		hotkey: 'ArrowRight',
 	},
 ];
 
