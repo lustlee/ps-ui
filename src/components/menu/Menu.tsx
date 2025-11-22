@@ -1,13 +1,13 @@
-import cn from 'clsx';
-import { IMenuItem } from '../../types';
+import cn from 'clsx'
+import { IMenuItem } from '../../types/types'
 
 interface Props {
-	items: IMenuItem[];
-	activeValue: string;
-	onSelect: (value: string) => void;
-	containerClassName?: string;
-	buttonClassName?: string;
-	activeButtonClassName?: string;
+	items: IMenuItem[]
+	activeValue: string
+	onSelect: (value: string) => void
+	containerClassName?: string
+	buttonClassName?: string
+	activeButtonClassName?: string
 }
 
 export const Menu = ({
@@ -21,13 +21,15 @@ export const Menu = ({
 	return (
 		<nav className={containerClassName}>
 			<ul className='flex items-center'>
-				{items.map((item) => (
+				{items.map(item => (
 					<li key={item.slug}>
 						<button
 							onClick={() => onSelect(item.slug)}
 							className={cn(
 								buttonClassName,
-								activeValue === item.slug ? activeButtonClassName : 'border-transparent'
+								activeValue === item.slug
+									? activeButtonClassName
+									: 'border-transparent'
 							)}
 						>
 							{item.title}
@@ -36,5 +38,5 @@ export const Menu = ({
 				))}
 			</ul>
 		</nav>
-	);
-};
+	)
+}
