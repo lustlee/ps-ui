@@ -19,6 +19,11 @@ import cover8 from '../assets/images/covers/game-cover-8.jpg'
 import cover9 from '../assets/images/covers/game-cover-9.jpg'
 import cover10 from '../assets/images/covers/ps-store.jpg'
 
+import iconAvatar from '../assets/images/avatar-1.png'
+import iconPlus from '../assets/images/ps-plus.svg'
+
+export const USER_PROFILE = { iconAvatar, iconPlus }
+
 export const GAMES_DATA = [
 	{
 		title: 'ARC Raiders',

@@ -1,6 +1,12 @@
-import { Bell, Gamepad2, Handbag, SmilePlus, Trophy, Wifi } from 'lucide-react';
+import 'lucide-react'
+import { Bell, Gamepad2, Handbag, SmilePlus, Trophy, Wifi } from 'lucide-react'
+import { USER_PROFILE } from '../../../data/games.data'
 
-const currentTime = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: false });
+const currentTime = new Date().toLocaleTimeString([], {
+	hour: '2-digit',
+	minute: '2-digit',
+	hour12: false,
+})
 
 export const Header = () => {
 	return (
@@ -47,10 +53,20 @@ export const Header = () => {
 				</div>
 
 				<div className='flex items-center gap-3'>
-					<img src='/images/ps-plus.svg' alt='Ps Plus' width={24} height={24} />
+					<img
+						src={USER_PROFILE.iconAvatar}
+						alt='Ps Plus'
+						width={24}
+						height={24}
+					/>
 
 					<div className='flex items-center gap-3'>
-						<img src='/images/avatar-1.png' alt='Name User' width={45} height={45} />
+						<img
+							src={USER_PROFILE.iconPlus}
+							alt='Name User'
+							width={45}
+							height={45}
+						/>
 						<div>
 							<div className='mb-1'>FallingStickman</div>
 							<div className='flex items-center gap-1.5 text-xs'>
@@ -62,5 +78,5 @@ export const Header = () => {
 				</div>
 			</div>
 		</header>
-	);
-};
+	)
+}
